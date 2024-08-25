@@ -22,31 +22,30 @@ export default function UploadPage() {
     e.preventDefault();
 
     if (!file) return;
-
-    // Upload the file to the backend
-    const formData = new FormData();
-    formData.append('video', file);
-
+  
+    // Simulate the file upload process with a delay
+    setUploadStatus('Uploading...');
+  
     try {
-      const response = await fetch('/api/upload', {
-        method: 'POST',
-        body: formData,
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        // Assuming the response contains the ID or URL of the processed video
-        router.push(`/results?videoId=${data.videoId}`);
-      } else {
-        console.error('Failed to upload');
-      }
+      await new Promise((resolve) => setTimeout(resolve, 2000)); // Simulate a delay of 2 seconds
+  
+      // Mock response data
+      const mockData = {
+        videoId: 'mock-video-id-123',
+      };
+  
+      // Simulate successful upload and redirect to results page with mock video ID
+      setUploadStatus('Upload successful!');
+      router.push(`/results?videoId=${mockData.videoId}`);
     } catch (error) {
       console.error('Error:', error);
+      setUploadStatus('Failed to upload');
     }
   };
 
   const stack2 = (
     <div
+      className={styles.uploadSection} // Apply your custom class
       style={{
         borderRadius: '16px',
         border: '2px dashed #ffffff',

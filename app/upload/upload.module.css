@@ -54,6 +54,18 @@
     color: black;
 }
 
+.uploadSection {
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    cursor: pointer; /* Indicate that it's clickable */
+  }
+  
+  .uploadSection:hover {
+    transform: scale(1.05); /* Slightly enlarge the box on hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Lighten the background a bit */
+    border: 2px solid rgba(255, 255, 255, 0.6); /* Change border to solid and slightly increase opacity */
+  }
+  
+
 .userButton {
     position: absolute;
     top: 40px;
