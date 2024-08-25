@@ -6,7 +6,7 @@
     justify-content: center;
     height: 100vh;
     padding: 20px;
-    color: rgb(16, 16, 16);
+    color: white;
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 300;
     background-image: url('/bg.jpg'); /* Path to your image */
@@ -20,7 +20,7 @@
 
 .heading {
     font-size: 2rem;
-    color: black;
+    color: white;
     text-align: center;
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 800;
@@ -29,13 +29,13 @@
 .pSemi {
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 500;
-    color: rgb(15, 15, 15);
+    color:white;
 }
 
 .uploadBox {
-    background: rgba(238, 246, 255, 0.306); /* Darker, semi-transparent background */
-    backdrop-filter: blur(30px); /* Keep the strong blur for the frosted effect */
-    color: black;
+    background: rgba(255, 255, 255, 0.1); /* Light, highly frosted background */
+    backdrop-filter: blur(15px); /* Stronger blur for a super frosty effect */
+    color: white;
     padding: 20px;
     border-radius: 12px;
     width: 70vw; /* 70% of the viewport width */
@@ -44,6 +44,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    /* Enhanced glassmorphism border */
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Light, semi-transparent border for a frosted edge */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Soft, spread-out shadow for depth */
 }
 
 .uploadBox input[type="file"] {

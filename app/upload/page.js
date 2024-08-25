@@ -49,7 +49,7 @@ export default function UploadPage() {
     <div
       style={{
         borderRadius: '16px',
-        border: '2px dashed #000000',
+        border: '2px dashed #ffffff',
         width: '40vw',
         display: 'flex', // Flexbox for centering
         flexDirection: 'column',

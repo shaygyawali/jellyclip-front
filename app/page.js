@@ -11,6 +11,8 @@ import {
   UserButton,
   useUser,
 } from '@clerk/nextjs';
+import { GoArrowRight } from "react-icons/go";
+
 
 export default function Home() {
   const { isSignedIn } = useUser();
@@ -27,10 +29,14 @@ export default function Home() {
      <div className={styles.ombreOverlay}></div>
 
       <div className={styles.description}>
-        <h1 className="mainHead"> JellyClip </h1>
-        <h2 className="subHead"> Your content creation companion </h2>
+        <h1 className={styles.mainHead}> JELLYCLIP </h1>
+        <h2 className={styles.subHead}> Your content creation companion </h2>
           <SignedOut>
-            <SignInButton />
+            <SignInButton className={styles.submitButton}>
+              <span className={styles.arrow}>
+                <GoArrowRight />
+              </span>
+              </SignInButton>
           </SignedOut>
           <SignedIn>
             <UserButton />
